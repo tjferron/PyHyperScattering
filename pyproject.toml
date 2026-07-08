@@ -11,7 +11,7 @@ authors = [
 description = "Utilities for loading, reducing, fitting, and plotting hyperspectral x-ray and neutron scattering data."
 readme = "README.md"
 license = "NIST-PD-fallback"
-requires-python = ">=3.6"
+requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
@@ -24,7 +24,7 @@ dependencies = [
     "h5py",
     "numpy",
     "pandas",
-    "pyfai",
+    "pyfai==2024.9.0",
     "scikit-image",
     "scipy",
     "pillow",
@@ -130,3 +130,8 @@ versionfile_source = "src/PyHyperScattering/_version.py"
 versionfile_build = "PyHyperScattering/_version.py"
 tag_prefix = ""
 parentdir_prefix = "pyhyperscattering-"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
