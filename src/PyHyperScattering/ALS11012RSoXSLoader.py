@@ -284,7 +284,7 @@ class ALS11012RSoXSLoader(FileLoader):
                 i1_interp = (
                     np.interp(en, en1, pd1) / np.interp(en, en1, ai1)
                 ) / i0_interp
-                corr /= i1_interp
+                corr *= i1_interp
         else:
             corr = 1
 
